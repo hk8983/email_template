@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+</head>
+<style>
+    table {
+        width: 100%;
+    }
+
+    td.invoice {
+        font-weight: 600;
+        letter-spacing: 8px;
+        font-size: 24px;
+        margin-bottom: 7px;
+        display: table;
+    }
+
+    .header-right {
+        float: right;
+    }
+
+    .bill-table p {
+        font-size: 13px;
+        margin-top: 0px;
+        margin-bottom: 0px;
+        padding-top: 3px;
+        padding-bottom: 3px;
+    }
+
+    .bill-table small {
+        font-weight: 600;
+        text-transform: uppercase;
+        font-size: 11px;
+    }
+
+    .bill-table td:last-child {
+        width: 190px;
+        vertical-align: text-top;
+    }
+
+    .bill-table {
+        margin-top: 15px;
+        margin-bottom: 30px;
+    }
+
+    .border-b {
+        border-bottom: 1px solid #ccc;
+    }
+
+    .text-success {
+        color: #33d88f !important;
+    }
+
+    .pt-5 {
+        padding-top: 5px;
+    }
+
+    .header td {
+        color: #6A666C;
+        font-size: 13px;
+    }
+
+    .header td.uppercase {
+        text-transform: uppercase;
+    }
+
+    td.invoice {
+        font-weight: 600;
+        letter-spacing: 8px;
+        font-size: 24px;
+        margin-bottom: 7px;
+        display: table;
+    }
+
+    .header tr {
+        margin-top: 5px;
+        margin-bottom: 5px;
+        width: 100%;
+    }
+
+    .main-table {
+        border-collapse: collapse;
+    }
+
+    .main-table thead tr {
+        border-top: 1px solid #ccc;
+        border-bottom: 1px solid #ccc;
+    }
+
+    .main-table th:first-child {
+        text-align: left;
+    }
+
+    .main-table th {
+        font-size: 11px;
+        color: #3a3e48;
+        text-transform: uppercase;
+
+        border-top: 1px solid #ccc;
+        border-bottom: 1px solid #ccc;
+        padding-bottom: 10px;
+        padding-top: 10px;
+    }
+
+    .main-table td {
+        padding-top: 16px;
+        padding-bottom: 16px;
+        font-size: 14px;
+    }
+
+    .main-table th:not(:first-child),
+    .main-table td:not(:first-child) {
+        width: 90px;
+        text-align: center;
+    }
+
+    .main-table td:last-child,
+    .main-table th:last-child {
+        text-align: right;
+    }
+
+    .main-table td:last-child {
+        font-weight: 600;
+    }
+
+    .main-table tbody {
+        border-bottom: 1px solid #ccc;
+    }
+
+    .main-table tr:last-child td {
+        padding-bottom: 40px;
+    }
+
+    .total {
+        width: 35%;
+        margin-left: auto;
+        border-bottom: 1px solid #ccc;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    .total td,
+    .total {
+        text-align: right;
+    }
+
+    .total td {
+        font-size: 14px;
+        color: #6A666C;
+    }
+
+    .v-align-bottom,
+    .total td:last-child {
+        vertical-align: bottom;
+    }
+
+
+    .total td {
+        width: 120px;
+        display: inline-table;
+    }
+
+    .total-amount {
+        text-align: right;
+        width: 35%;
+        margin-left: auto;
+    }
+
+    .total-amount td {
+        font-size: 14px;
+        font-weight: 600;
+        color: #3a3e48;
+        text-align: right;
+        padding-top: 5px;
+        width: 120px;
+        display: inline-table;
+    }
+
+    .total__price {
+        font-size: 18px;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+    .total__label {
+        font-weight: 400 !important;
+        font-size: 18px;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+    .uppercase {
+        text-transform: uppercase;
+    }
+
+
+    .sub-total {
+        text-align: right;
+        width: 35%;
+        margin-left: auto;
+        border-bottom: 1px solid #ccc;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+</style>
+
+<body>
+    <section>
+        <table class="header" width="100%">
+            <tr>
+                <td>
+                    <table>
+                        <tr>
+                            <td><img alt="Fibrestram" width="130" src="img/circular_icon@2x.png" /></td>
+                        </tr>
+                        <tr>
+                            <td>1558 Crucero Avenue</td>
+                        </tr>
+                        <tr>
+                            <td>San Jose, CA 95122</td>
+                        </tr>
+                        <tr>
+                            <td>TAX REGN <strong>#1234567</strong></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="border-b" style="width: 70px"></div>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+                <td class="header-right">
+                    <table>
+                        <tr>
+                            <td class="invoice">INVOICE</td>
+                        </tr>
+                        <tr>
+                            <td>Invoice <strong>#00123456</strong></td>
+                        </tr>
+                        <tr>
+                            <td>Invoice date <strong>17 Feb, 2015</strong></td>
+                        </tr>
+                        <tr>
+                            <td>Invoice amount <strong>$115.50</strong></td>
+                        </tr>
+                        <tr>
+                            <td>Invoice amount <strong>$115.50</strong></td>
+                        </tr>
+                        <tr>
+                            <td>Customer ID <strong>defadertgfg</strong></td>
+                        </tr>
+                        <tr>
+                            <td>Customer PO <strong>#12345</strong></td>
+                        </tr>
+                        <tr>
+                            <td class="uppercase">
+                                <strong class="text-success">paid</strong>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="border-b pt-5" style="width: 60px"></div>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+
+        <table class="bill-table">
+            <tbody>
+                <tr>
+                    <td>
+                        <small>Billed To</small>
+                        <p>Jonathan lve,</p>
+                        <p>1588 Crucero Avenue,</p>
+                        <p>San Jose, CA 95122</p>
+                    </td>
+                    <td>
+                        <small>Shipped To</small>
+                        <p>Jonathan lve,</p>
+                        <p>1588 Crucero Avenue,</p>
+                        <p>San Jose, CA 95122</p>
+                    </td>
+                    <td>
+                        <small>SUBSCRIPTION</small>
+                        <p><span>ID: </span> <strong>309918129391230</strong></p>
+                        <p>
+                            <span>Next Bill Date: </span> <strong>Mar 17, 2015</strong>
+                        </p>
+                        </p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <table class="main-table">
+            <thead>
+                <tr>
+                    <th>Description</th>
+                    <th>Units</th>
+                    <th>Unit Price</th>
+                    <th>Vat</th>
+                    <th>Amount</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <strong>Basic Plan</strong>
+                        <span>&nbsp; (Oct 02 to Nov 02, 2015)</span>
+                    </td>
+                    <td>2</td>
+                    <td>$7.00</td>
+                    <td>10%</td>
+                    <td>$14.00</td>
+                </tr>
+                <tr>
+                    <td>
+                        <strong>SSL</strong>
+                        <span>&nbsp; (Oct 02 to Nov 02, 2015)</span>
+                    </td>
+                    <td>1</td>
+                    <td>$49.00</td>
+                    <td>10%</td>
+                    <td>$49.00</td>
+                </tr>
+                <tr>
+                    <td>
+                        <strong>SMS Credits</strong>
+                        <span>&nbsp; (Oct 02, 2015 to Jan 01, 2016)</span>
+                    </td>
+                    <td>1</td>
+                    <td>$49.00</td>
+                    <td>10%</td>
+                    <td>$49.00</td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="sub-total">
+            <tbody>
+                <tr>
+                    <td>Sub Total</td>
+                    <td>$112.00</td>
+                </tr>
+                <tr>
+                    <td class="pt-5">VAT @ 10%</td>
+                    <td>$9.94</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <table class="total">
+            <tbody>
+                <tr>
+                    <td class="right">
+                        <h2 class="total__label">
+                            Total
+                        </h2>
+                    </td>
+                    <td class="v-align-bottom">
+                        <h2 class="total__price">$121.94</h2>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="right pt-5">Payments</td>
+                    <td class="font-normal v-align-bottom">($121.94)</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <table class="total-amount">
+            <tbody>
+                <tr>
+                    <td class="right">
+                        <h4 class="my-0 uppercase">Amount Due</h4>
+                    </td>
+                    <td>$0.00</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+</body>
+
+</html>
